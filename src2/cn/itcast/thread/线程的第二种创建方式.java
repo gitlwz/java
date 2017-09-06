@@ -18,7 +18,12 @@ package cn.itcast.thread;
 		5.调用Thread对象的start方法开启一个线程
 		
 	问题1：请问Runnable实现类的对象是线程对象吗？
-		1
+		Runnable实现类对象并不是一个线程对象，只不过是实现了Runnable接口的对象而已。
+		只有是Thread或者Thread的子类才是线程对象。
+	
+	问题2：为什么要把Runnable实现类的对象作为实参传递给Thread对象呢？作用是什么？
+		作用就是吧Runnable实现类的对象的run方法作为了线程的任务代码去执行了。
+		
  */
 
 public class 线程的第二种创建方式  implements Runnable{
@@ -35,7 +40,8 @@ public class 线程的第二种创建方式  implements Runnable{
 //		创建Runnable实现类对象
 		线程的第二种创建方式  d = new 线程的第二种创建方式();
 //		创建Thread类，并且把Runnable实现类的对象作为实参传递
-		Thread thread = new Thread(d,"狗娃");
+		Thread thread = new Thread(d,"狗娃"); //Thread类使用
+		
 //		调用Thread对象的start方法开启一个线程
 		thread.start();
 		
