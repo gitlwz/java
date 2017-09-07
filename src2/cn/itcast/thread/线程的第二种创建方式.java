@@ -24,6 +24,8 @@ package cn.itcast.thread;
 	问题2：为什么要把Runnable实现类的对象作为实参传递给Thread对象呢？作用是什么？
 		作用就是吧Runnable实现类的对象的run方法作为了线程的任务代码去执行了。
 		
+	推荐使用：第二种。实现Runable接口。
+	
  */
 
 public class 线程的第二种创建方式  implements Runnable{
