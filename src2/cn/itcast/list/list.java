@@ -17,7 +17,9 @@ List接口中特有方法：
 	
 	添加
 		add(int index, E element) 
-		addAll(int index, Collection<? extends E> c) 
+		addAll(int index, Collection<? extends E> c)
+	删除
+	 	remove(int index) 
 	获取：
 		get(int index) 
 		indexOf(Object o) 
@@ -25,6 +27,7 @@ List接口中特有方法：
 		subList(int fromIndex, int toIndex) 
 	修改：
 		set(int index, E element) 
+		
 
 	迭代
 		listIterator() 

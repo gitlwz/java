@@ -6,10 +6,10 @@ import java.util.ArrayList;
 集合体系
 ---------| Collection 单列集合的跟接口
 ------------|List
-----------------| ArrayList             ArrayList底层维护了一个Object数组实现的。查询速度快，增加删除慢。
-							什么时候使用ArrayList：如果目前的数据是查询比较多，增删比较少的时候，那么就使用ArrayList存储这批数据。比如:高校的图书馆
-							
-----------------| LinkedList
+----------------| ArrayList     ArrayList底层维护了一个Object数组实现的。查询速度快，增加删除慢。
+								什么时候使用ArrayList：如果目前的数据是查询比较多，增删比较少的时候，那么就使用ArrayList存储这批数据。比如:高校的图书馆
+							 
+----------------| LinkedList    
 ----------------| Vector(了解即可)
 ------------|Set
 
