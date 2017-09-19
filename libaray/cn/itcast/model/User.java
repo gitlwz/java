@@ -1,5 +1,7 @@
 package cn.itcast.model;
 
+
+//用户类
 public class User {
 
 	private	String userName;
@@ -15,4 +17,27 @@ public class User {
 		this.userName = userName;
 		this.password = password;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "用户名"+ this.userName +" 密码："+ this.password;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 }

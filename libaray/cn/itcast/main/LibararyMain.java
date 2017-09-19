@@ -2,6 +2,8 @@ package cn.itcast.main;
 
 import java.util.Scanner;
 
+import cn.itcast.dao.UserDao;
+
 public class LibararyMain {
 
 	public static void main(String[] args) {
@@ -17,12 +19,13 @@ public class LibararyMain {
 		System.out.println("*                                      *");
 		System.out.println("****************************************");
 		Scanner  scanner = new Scanner(System.in);
+		UserDao userDao = new UserDao();
 		while(true){
 			System.out.println("请选择功能：A(用户登陆)    B(注册用户)      Q(退出系统)");
 			String option = scanner.next();
 			
 			if("a".equalsIgnoreCase(option)){
-				System.out.println("选择了登录！！！");
+				userDao.reg();
 				
 			}else if("b".equalsIgnoreCase(option)){
 				System.out.println("选择了注册！！！");
