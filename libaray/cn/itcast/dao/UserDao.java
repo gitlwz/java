@@ -1,6 +1,7 @@
 package cn.itcast.dao;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 import cn.itcast.model.User;
@@ -43,5 +44,28 @@ public class UserDao {
 		System.out.println("注册功能...");
 		System.out.println("当前用户有："+users );
 	}
-	
+	//登录
+	public boolean login() {
+		Scanner scanner = new Scanner(System.in);
+		String userName = null;
+		String password = null;
+		a:while(true){
+			System.out.println("请输入用户名:"); 
+			userName = scanner.next();
+			Iterator<User> it = users.iterator();
+			while (it.hasNext()) {
+				User user = it.next();
+				if(user.getUserName().equals(userName)){
+					System.out.println("请输入密码:");
+					password = scanner.next();
+					if( user.getPassword().equals(password)){
+						return true;
+					}else {
+						return false;
+					}
+				}
+			}
+			System.out.println("用户名不存在请重新输入:"); 
+		}
+	}
 }
