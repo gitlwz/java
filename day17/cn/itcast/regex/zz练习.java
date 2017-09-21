@@ -13,7 +13,7 @@ import java.util.Arrays;
 			split()
 		
 		替换：
-		
+			replaceAll(String regex, String replacement) 
 		
 		查找：
  
@@ -26,6 +26,8 @@ public class zz练习 {
 		matchesPhon("18339967951");
 		tests1();
 		tests2();
+		replaceAll();
+		replaceAll2();
 	}
 	
 	//匹配---------------------
@@ -63,8 +65,19 @@ public class zz练习 {
 	}
 	
 	
+	//替代-----------------------------------------
+	public static void replaceAll() {
+		String str  = "如有需求请联系我：18339967951    如有需求请联系我：18339967951 ";
+		String reg = "1[34578]\\d{9}";
+		String str1 = str.replaceAll(reg, "****");
+		System.out.println("被替换的内容是            " + str1);
+	}
 	
-	
+	public static void replaceAll2() {
+		String str  = "我我我我我我我我我我要要要要要要要要做做做做做做做做项项项项项项项项项目目目";
+		str = str.replaceAll("(.)\\1+", "$1");   //如果需要在repalceAll方法正则的外部引用组的内容，那么是使用“$组号”;
+		System.out.println("替换2========" + str);
+	}
 	//作业：编写一个正则匹配一个邮箱
 	
 	

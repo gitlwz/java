@@ -2,6 +2,7 @@ package cn.itcast.main;
 
 import java.util.Scanner;
 
+import cn.itcast.dao.BookDao;
 import cn.itcast.dao.UserDao;
 
 public class LibararyMain {
@@ -47,17 +48,23 @@ public class LibararyMain {
 	public static boolean BookDeal() {
 		
 		Scanner  scanner = new Scanner(System.in);
+		BookDao bookDao = new BookDao();
 		while(true){
 			System.out.println("欢迎使用图书馆系统操作图书请选择功能：A(查看图书)    B(增加图书)  c(修改图书)  d(删除图书)    E(注销本用户)");
 			String option = scanner.next();
 			
 			if("a".equalsIgnoreCase(option)){
 				System.out.println("查看图书");
-				System.out.println("|书名|\t|作者|\t|出版社|\t|价格|\t|书号|\t|出版日期|");
 				
-				
+				bookDao.query();
+				System.out.println("欢迎使用图书馆系统操作图书请选择功能：A(按价格排序)    B(作者排序)  c(出版日期排序)  E(返回上一级)");
+				String bookOptionString = scanner.next();
+				if("e".equalsIgnoreCase(bookOptionString)) continue;
+				bookDao.booksSort(bookOptionString);
 			}else if("b".equalsIgnoreCase(option)){
 				System.out.println("选择了增加图书");
+				
+				bookDao.booksAdd();
 			}else if("c".equalsIgnoreCase(option)){
 				System.out.println("选择了修改图书");
 			}else if("d".equalsIgnoreCase(option)){
