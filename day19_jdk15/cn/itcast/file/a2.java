@@ -16,6 +16,7 @@ import java.io.File;
 注意：如果程序当前所在的路径与资源文件不是在同一个盘下面，是没法写相对路径的
 
 
+
 */
 public class a2 {
 
