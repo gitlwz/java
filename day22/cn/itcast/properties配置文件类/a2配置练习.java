@@ -46,9 +46,6 @@ public class a2配置练习 {
 		
 		//使用Properties生成一个配置文件
 		properties.store(new FileWriter(file), "runtiome");
-		
-		
-		
 	}
 
 }
