@@ -10,6 +10,8 @@
 	<classpathentry kind="src" path="day20"/>
 	<classpathentry kind="src" path="day21"/>
 	<classpathentry kind="src" path="day22"/>
+	<classpathentry kind="src" path="day23"/>
+	<classpathentry kind="src" path="day24"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
